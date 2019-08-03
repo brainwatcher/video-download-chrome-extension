@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "authorID",
+    "version": "1",
+	
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	"browser_action": {},
+
+	"content_scripts": [{
+		"matches": ["<all_urls>"],
+		"run_at": "document_idle",
+		"js": ["content.js"]
+    }],	
+	"permissions": [
+		"downloads",
+		"webNavigation",
+		"tabs",
+		"<all_urls>"
+	]
+}
